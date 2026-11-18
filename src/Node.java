@@ -1,9 +1,9 @@
-public class Node {
-    Student student;
-    Node next;
+public class Node<T> {
+    T data;
+    Node<T> next;
 
-    Node(Student student){
-        this.student = student;
+    Node(T data){
+        this.data = data;
         next = null;
     }
 }

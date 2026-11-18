@@ -7,7 +7,6 @@ public class Demo {
         //Create the list:
         StudentList studentList = new StudentList();
 
-
         //Initialize 5 students:
         Student student1 = new Student(101, "Ahmet Yilmaz", "Software Engineering", 3.45, 65);
         Student student2 = new Student(102, "Zeynep Kaya", "Computer Engineering", 3.80, 72);
@@ -38,5 +37,45 @@ public class Demo {
         //Print the final list:
         System.out.println("\nFinal Student List:");
         studentList.printList();
+
+
+        System.out.println("\n=== TASK 2: REGISTRATION QUEUE TEST ===");
+
+        //Create the queue:
+        RegistrationQueue registrationQueue = new RegistrationQueue();
+
+        //Initialize 8 registration requests:
+        RegistrationRequest request1 = new RegistrationRequest(101, "CENG 201", 1001L);
+        RegistrationRequest request2 = new RegistrationRequest(102, "CENG 201", 1002L);
+        RegistrationRequest request3 = new RegistrationRequest(103, "MATH 203", 1003L);
+        RegistrationRequest request4 = new RegistrationRequest(104, "PHYS 102", 1004L);
+        RegistrationRequest request5 = new RegistrationRequest(105, "CENG 205", 1005L);
+        RegistrationRequest request6 = new RegistrationRequest(106, "HIST 201", 1006L);
+        RegistrationRequest request7 = new RegistrationRequest(107, "CENG 201", 1007L);
+        RegistrationRequest request8 = new RegistrationRequest(108, "ENG 201", 1008L);
+
+        //Enqueue all 8 requests:
+        registrationQueue.enqueue(request1);
+        registrationQueue.enqueue(request2);
+        registrationQueue.enqueue(request3);
+        registrationQueue.enqueue(request4);
+        registrationQueue.enqueue(request5);
+        registrationQueue.enqueue(request6);
+        registrationQueue.enqueue(request7);
+        registrationQueue.enqueue(request8);
+
+        //Print the initial queue and size:
+        System.out.println("Initial Queue (Size: " + registrationQueue.size() + "):");
+        registrationQueue.printQueue();
+
+        //Process (dequeue) 3 requests:
+        System.out.println("\nProcessing 3 requests (FIFO)...");
+        System.out.println("Processed: " + registrationQueue.dequeue());
+        System.out.println("Processed: " + registrationQueue.dequeue());
+        System.out.println("Processed: " + registrationQueue.dequeue());
+
+        //Print the remaining queue and size:
+        System.out.println("\nRemaining Queue (Size: " + registrationQueue.size() + "):");
+        registrationQueue.printQueue();
     }
 }
