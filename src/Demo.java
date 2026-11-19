@@ -77,5 +77,39 @@ public class Demo {
         //Print the remaining queue and size:
         System.out.println("\nRemaining Queue (Size: " + registrationQueue.size() + "):");
         registrationQueue.printQueue();
+
+
+        System.out.println("\n=== TASK 3: COURSE DROP STACK TEST ===");
+
+        //Create the stack:
+        DropStack dropStack = new DropStack();
+
+        //Initialize 5 course-drop records:
+        DropRecord drop1 = new DropRecord(101, "CENG 201", 2001L);
+        DropRecord drop2 = new DropRecord(102, "MATH 203", 2002L);
+        DropRecord drop3 = new DropRecord(103, "PHYS 102", 2003L);
+        DropRecord drop4 = new DropRecord(104, "CENG 205", 2004L);
+        DropRecord drop5 = new DropRecord(105, "HIST 201", 2005L);
+
+        //Push all 5 records:
+        dropStack.push(drop1);
+        dropStack.push(drop2);
+        dropStack.push(drop3);
+        dropStack.push(drop4);
+        dropStack.push(drop5);
+
+        //Print the initial stack and top element:
+        System.out.println("Initial Stack (Size: " + dropStack.getSize() + "):");
+        dropStack.printStack();
+        System.out.println("Top Record (Peek): " + dropStack.peek());
+
+        //Process (pop) 2 records:
+        System.out.println("\nProcessing 2 drop records (LIFO)...");
+        System.out.println("Processed: " + dropStack.pop());
+        System.out.println("Processed: " + dropStack.pop());
+
+        //Print the remaining stack and size:
+        System.out.println("\nRemaining Stack (Size: " + dropStack.getSize() + "):");
+        dropStack.printStack();
     }
 }

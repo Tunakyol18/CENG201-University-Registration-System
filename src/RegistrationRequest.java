@@ -13,17 +13,11 @@ public class RegistrationRequest {
     }
 
     //Getter methods:
-    public int getStudentId() {
-        return studentId;
-    }
+    public int getStudentId() { return studentId; }
 
-    public long getRequestTime() {
-        return requestTime;
-    }
+    public long getRequestTime() { return requestTime; }
 
-    public String getCourseCode() {
-        return courseCode;
-    }
+    public String getCourseCode() { return courseCode; }
 
     @Override
     public String toString() {
